@@ -1,0 +1,24 @@
+/* styles.css */
+
+/* div element styles */
+div {
+    background-color: red;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* p element styles (internal method) */
+p {
+    background-color: green;
+    color: white;
+    font-size: 18px;
+}
+
+/* button element styles (inline method) */
+button {
+    background-color: orange;
+    font-size: 18px;
+}
+
