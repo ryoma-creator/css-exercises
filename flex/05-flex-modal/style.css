@@ -11,6 +11,7 @@ body {
   color: #333;
   /* I'll give you this one for free lol */
   display: flex;
+   /* my idea　⇩*/
   align-items: center;
   justify-content: center;
 }
@@ -20,6 +21,13 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  /* my idea　⇩*/
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 15px;
+  gap: 15px;
+
 }
 
 .icon {
@@ -30,10 +38,28 @@ body {
   width: 42px;
   height: 42px;
   border-radius: 50%;
+   /* my idea　⇩*/
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+
+  
 }
+
+ /* my idea　⇩*/
+ .header{
+  font-weight: bold;
+
+ }
+/* my idea　⇩*/
+ .class1{
+  margin-bottom:7px;
+ }
+
+ .text{
+  margin-bottom:10px;
+ }
 
 .close-button {
   background: #eee;
@@ -48,6 +74,8 @@ body {
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
+   /* my idea　⇩*/
+  flex-shrink:0;
 }
 
 button {
@@ -66,4 +94,10 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+}
+
+/* my solution*/
+.main1{
+  display: flex;
+  justify-content: space-between;
 }
