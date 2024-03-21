@@ -5,6 +5,7 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+
 }
 
 img {
@@ -25,3 +26,82 @@ input {
   width: 400px;
   margin-bottom: 16px;
 }
+
+/* my solution ⇩*/
+
+/* body*/
+body{
+  display:flex;
+  /*if you did not put on flex-display on parents(in this case, body),
+  flex-grow does not work, so be careful!!!!*/
+  flex-direction: column;
+}
+
+/* header*/
+.header{
+  display:flex;
+  justify-content:space-between; 
+  flex-shrink:1;
+  padding:20px; 
+}
+
+.header ul{
+  list-style: none;
+  padding: 0; /* padding reset (It had [・]space as default. 
+  so you need to remove first!) */
+  margin: 0; /* margin reset  */
+
+  /* important！padding(default[・]) reset, 
+  after that you can put on padding except 
+  for default padding space! 
+  ⇩ ⇩ ⇩ */
+  display:flex;
+  gap:10px;
+}
+
+/* content*/
+.content{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+
+  /*if you did not put on flex-display on parents(in this case, body),
+  flex-grow does not work, so be careful!!!!*/
+  flex-grow: 1;
+}
+.content button{
+  padding:5px 10px;
+}
+
+/* footer*/
+.footer{
+  display:flex;
+  justify-content:space-between;
+  flex-shrink:1; 
+  background-color:#eeeeee;
+
+}
+  
+.footer ul{
+  list-style: none;
+  padding: 0; /* padding reset (It had [・]space as default. 
+  so you need to remove first!) */
+  margin: 0; /* margin reset  */
+
+  /* important！padding(default[・]) reset, 
+  after that you can put on padding except 
+  for default padding space! 
+  ⇩ ⇩ ⇩ */
+ 
+  padding:20px;
+  display:flex;
+  gap:10px;
+  
+}
+
+
+.header a, .footer a {
+  text-decoration: none;
+}
+
