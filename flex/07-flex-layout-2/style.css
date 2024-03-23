@@ -1,3 +1,4 @@
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -14,16 +15,124 @@ body {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+
 }
+
+
 
 .sidebar {
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
+ 
 }
+
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
 }
+
+
+/* My Idea for The Holy Grail of Layout by Flex */
+/*⇩⇩⇩⇩⇩⇩*/
+
+body{
+  display:flex;
+  flex-direction:column;
+
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size:32px;
+  font-weight: 900;
+  padding-left:16px;
+  flex-shrink:1;
+}
+/*- The header text is size 32px and weight 900.
+- The header text is vertically centered and 16px from the edge of the screen.*/
+
+
+
+.content{
+  display:flex;
+  flex-direction: row;
+  flex-grow:1;
+  flex-wrap: wrap;
+}
+
+.sidebar{
+  flex-shrink:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding:16px;
+
+}
+
+.sidebar ul{
+ 
+  padding:16px;
+  list-style-type: none;
+  padding: 0; /* パディングをリセット */ 
+  margin: 0; /* マージンをリセット */ 
+}
+
+.sidebar ul li a{
+  font-size: 24px;
+  text-decoration: none;
+  color:white;
+  padding: 8px 0; /* Optional: Adds some padding to the links for better spacing */
+  display: block; /* Optional: Makes the links fill the entire list item for easier clicking */
+
+}
+
+/*
+- The sidebar and cards take up all available space above the footer.
+- The sidebar is 300px wide (and it doesn't shrink).
+- The sidebar links are size 24px, are white, 
+  and do not have the underline text decoration.
+- The sidebar has 16px padding.
+*/
+
+/*⇩ No Need it...
+.six-content{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: inherit;
+  flex-grow:1;
+  background-color: aquamarine;
+}
+/*
+
+/*
+- There is 32px padding around the 'cards' section.
+- The cards are arranged horizontally, 
+  but wrap to multiple lines when they run out of room on the page.
+*/
+
+.footer{
+  position: absolute; /* Position the footer absolutely at the bottom */
+  bottom: 0; /* Stick it to the bottom */
+  left: 0; /* Stretch from the left edge */
+  right: 0; /* to the right edge */
+  
+  display: flex;
+  justify-content: center; /* Horizontally centers the child in the flex container */
+  align-items: center; /* Vertically centers the child in the flex container */
+  flex-shrink:1;
+  
+}
+
+/*- The footer is pushed to the bottom of the screen 
+(the footer may go _below_ the bottom of the screen 
+if the content of the 'cards' section overflows and/or 
+if your screen is shorter).
+- The footer text is centered horizontally 
+and vertically.*/
+

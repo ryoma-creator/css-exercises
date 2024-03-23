@@ -69,6 +69,7 @@ body{
   /*if you did not put on flex-display on parents(in this case, body),
   flex-grow does not work, so be careful!!!!*/
   flex-grow: 1;
+  
 }
 .content button{
   padding:5px 10px;
